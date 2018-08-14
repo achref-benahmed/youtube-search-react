@@ -8,15 +8,13 @@ import VideoDetail from "./comp/video_detail";
 
 const API_Key = "AIzaSyARm7A9E6PKVRrw399o7DFLqldKfTZAaR0";
 
-YTSearch ({key : API_Key, term: "surfboards"}, function (data){
-  console.log (data);
-});
+
 // Make a new Component
 class App extends Component {
   constructor (props){
     super (props);
     this.state = {videos : [] };
-    YTSearch ({key : API_Key, term: "surfboards"},  (videos)=>{
+    YTSearch ({key : API_Key, term: "I love Tunisia"},  (videos)=>{
       this.setState({videos});
     //ES6 Syntax The same as  this.setState({videos : videos});
     // Only works when the key and the property have the same name
